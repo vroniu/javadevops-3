@@ -10,6 +10,7 @@ name: Build image
 
 on:
   push
+  workflow_dispatch
 
 jobs:
   build:
