@@ -9,7 +9,7 @@
 name: Build image
 
 on:
-  push
+  [push, workflow_dispatch]
 
 jobs:
   build:
