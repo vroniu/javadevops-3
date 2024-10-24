@@ -51,8 +51,6 @@ jobs:
       with:
         context: ./${{env.WORKDIR}}
         push: true
-        tags:
-          latest
-          ${{ steps.getversion.outputs.version }}
+        tags: ${{ steps.meta.outputs.tags }}
         labels: ${{ steps.meta.outputs.labels }}
     
