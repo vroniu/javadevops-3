@@ -46,13 +46,15 @@ jobs:
       with:
         images: ${{ env.DOCKER_USERNAME }}/${{ env.DOCKER_IMAGE_NAME }}
     - name: Output build parameters
-      run: echo "Building image ${{ steps.meta.outputs.labels }}\nTag list ${{ steps.meta.outputs.tags }}\nVersion ${{ steps.getversion.outputs.version }}"
+      run: echo "Building image ${{ env.DOCKER_USERNAME }}/${{ env.DOCKER_IMAGE_NAME }}"; echo "Version ${{ steps.getversion.outputs.version }}"
     - name: Build and push Docker image
       id: push
       uses: docker/build-push-action@3b5e8027fcad23fda98b2e3ac259d8d67585f671
       with:
         context: ./${{env.WORKDIR}}
         push: true
-        tags: latest
+        tags: 
+          ${{ env.DOCKER_USERNAME }}/${{ env.DOCKER_IMAGE_NAME }}:${{ steps.getversion.outputs.version }}
+          ${{ env.DOCKER_USERNAME }}/${{ env.DOCKER_IMAGE_NAME }}:latest
         labels: ${{ steps.meta.outputs.labels }}
     
