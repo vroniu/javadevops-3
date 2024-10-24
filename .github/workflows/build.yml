@@ -53,7 +53,8 @@ jobs:
       with:
         context: ./${{env.WORKDIR}}
         push: true
-        tags: 
-          "${{ env.DOCKER_USERNAME }}/${{ env.DOCKER_IMAGE_NAME }}:${{ steps.getversion.outputs.version }};${{ env.DOCKER_USERNAME }}/${{ env.DOCKER_IMAGE_NAME }}:latest"
+        tags: |
+          ${{ env.DOCKER_USERNAME }}/${{ env.DOCKER_IMAGE_NAME }}:${{ steps.getversion.outputs.version }}
+          ${{ env.DOCKER_USERNAME }}/${{ env.DOCKER_IMAGE_NAME }}:latest
         labels: ${{ steps.meta.outputs.labels }}
     
