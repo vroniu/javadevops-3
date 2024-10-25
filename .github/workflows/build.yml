@@ -14,7 +14,7 @@ on:
 env:
   DOCKER_USERNAME: vroniu
   DOCKER_IMAGE_NAME: javadevops
-  WORKDIR: task3-5
+  WORKDIR: task3
 
 jobs:
   build:
