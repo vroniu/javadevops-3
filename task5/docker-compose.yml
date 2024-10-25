@@ -42,4 +42,4 @@ services:
       - 8010:8080
     environment:
       - DEVOPS=${DEVOPS}
-      - DATABASE_URL=
+      - DATABASE_URL=database
