@@ -33,13 +33,15 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
+    ports:
+      - 54321:54321
   spring-boot-app:
     depends_on:
       database:
         condition: service_healthy
-    image: vroniu/javadevops:1.1.1
+    image: vroniu/javadevops:1.1.3
     ports:
-      - 8010:8080
+      - 8010:8888
     environment:
       - DEVOPS=${DEVOPS}
       - DATABASE_URL=database
