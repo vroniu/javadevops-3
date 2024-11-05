@@ -3,11 +3,19 @@ package src.javadevops;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * The main Spring Boot app entry point.
+ */
 @SpringBootApplication
-public class JavadevopsApplication {
+public final class JavadevopsApplication {
+    private JavadevopsApplication() { }
 
-	public static void main(String[] args) {
-		SpringApplication.run(JavadevopsApplication.class, args);
-	}
+    /**
+     * Run the main app.
+     * @param args arguments for the app
+     */
+    public static void main(final String[] args) {
+        SpringApplication.run(JavadevopsApplication.class, args);
+    }
 
 }
