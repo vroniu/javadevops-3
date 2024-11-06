@@ -40,13 +40,8 @@ public final class RestController {
         return "Hello from " + devops + "!";
     }
 
-    /**
-     * Greet the user.
-     * @param name user to be greeted
-     * @return greeting
-     */
     @GetMapping("/greet/{name}")
-    public String getGreeting(@PathVariable final String name) {
+    public String getGreeting(@PathVariable String name) {
         log.info("Returning greeting for {}", name);
         return "Hello, " + name + "!";
     }
