@@ -10,6 +10,7 @@ pipeline {
                 echo 'Building project'
                 sh '''
                 cd task3
+                java -v
                 mvn clean install
                 '''
             }
