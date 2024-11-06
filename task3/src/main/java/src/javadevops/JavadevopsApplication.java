@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * The main Spring Boot app entry point.
  */
 @SpringBootApplication
-public final class JavadevopsApplication {
+public class JavadevopsApplication {
     private JavadevopsApplication() { }
 
     /**
