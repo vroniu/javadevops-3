@@ -8,16 +8,20 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building project'
+                sh '''
                 cd task3
                 mvn clean install
+                '''
             }
         }
         stage('Validate') {
             steps {
                 echo 'Validating project'
+                sh '''
                 cd task3
                 mvn test
                 mvn checkstyle:check
+                '''
             }
         }
     }
