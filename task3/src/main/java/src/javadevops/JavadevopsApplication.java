@@ -8,8 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 public class JavadevopsApplication {
-    private JavadevopsApplication() { }
-
     /**
      * Run the main app.
      * @param args arguments for the app
